@@ -2,6 +2,14 @@
 A light weight anti crawler Django app which blocks the IP addresses which sends too many hits to your application.
 You can decide the number of hits that are allowed per IP address in defined time.
 
+Installation
+-----------
+1. Install via `pip`
+
+    ```
+    pip install django-anti-crawler
+    ```
+
 Quick start
 -----------
 
