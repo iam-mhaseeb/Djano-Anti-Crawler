@@ -5,7 +5,7 @@ You can decide the number of hits that are allowed per IP address in defined tim
 Quick start
 -----------
 
-1. Add `"django_anti_crawler"` to your INSTALLED_APPS setting like this::
+1. Add `django_anti_crawler` to your INSTALLED_APPS setting like this::
     
     ```
     INSTALLED_APPS = [
@@ -47,7 +47,7 @@ Quick start
    Make sure you have database settings configured. Run the below command to create cache_table in database::
     
     ```
-    'python manage.py createcachetable'
+    python manage.py createcachetable
     ```
 
    You may choose whatever cache backend you want to use.
@@ -67,5 +67,5 @@ Quick start
 * **Muhammad Haseeb** - *Initial work* - [Muhammad Haseeb](https://github.com/iam-mhaseeb)
 
 ## Licensing
-The pycloudy library is [MIT Licenced](LICENSE).
+The project is [MIT Licenced](LICENSE).
 
