@@ -4,7 +4,7 @@ from setuptools import setup
 with io.open('readme.md', encoding='utf_8') as fp:
     readme = fp.read()
 
-setup(name='dajngo_anti_crawler',
+setup(name='django_anti_crawler',
       version='0.1',
       description='A light weight anti crawler app for Django.',
       long_description=readme,
@@ -14,7 +14,7 @@ setup(name='dajngo_anti_crawler',
       author='Muhammad Haseeb',
       author_email='haseeb.emailbox@gmail.com',
       license='MIT',
-      packages=['dajngo_anti_crawler'],
+      packages=['django_anti_crawler'],
       zip_safe=False,
       include_package_data=True
 )
