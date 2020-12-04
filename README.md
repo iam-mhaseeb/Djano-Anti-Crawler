@@ -5,16 +5,18 @@ You can decide the number of hits that are allowed per IP address in defined tim
 Quick start
 -----------
 
-1. Add "django_anti_crawler" to your INSTALLED_APPS setting like this::
-
+1. Add `"django_anti_crawler"` to your INSTALLED_APPS setting like this::
+    
+    ```
     INSTALLED_APPS = [
         ...
         'django_anti_crawler',
     ]
+    ```
 
+2. Add `'DjangoAntiCrawlerMiddleware'` to your middleware classes in `settings.py` file::
 
-2. Add 'DjangoAntiCrawlerMiddleware' to your middleware classes in settings.py file::
-
+    ```
     MIDDLEWARE = [
         'django_anti_crawler.middlewares.DjangoAntiCrawlerMiddleware',
         'django.middleware.security.SecurityMiddleware',
@@ -25,23 +27,28 @@ Quick start
         'django.contrib.messages.middleware.MessageMiddleware',
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
     ]
+    ```
 
-    DjangoAntiCrawlerMiddleware' can be and should be first middleware as we need to make sure IP check is the very first
+    `DjangoAntiCrawlerMiddleware` can be and should be first middleware as we need to make sure IP check is the very first
     thing in processing request.
 
 
 3. If cache settings are not defined in your settings.py file, then you need to add below lines to your settings.py file::
 
+    ```
     CACHES = {
         'default': {
             'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
             'LOCATION': 'cache_table',
         }
     }
+    ```
 
    Make sure you have database settings configured. Run the below command to create cache_table in database::
-
+    
+    ```
     'python manage.py createcachetable'
+    ```
 
    You may choose whatever cache backend you want to use.
 
