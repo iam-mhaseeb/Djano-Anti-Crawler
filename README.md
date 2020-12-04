@@ -1,4 +1,7 @@
 # Djano-Anti-Crawler
+
+[![PyPI version](https://badge.fury.io/py/django-anti-crawler.svg)](https://badge.fury.io/py/django-anti-crawler)
+
 A light weight anti crawler Django app which blocks the IP addresses which sends too many hits to your application.
 You can decide the number of hits that are allowed per IP address in defined time.
 
