@@ -5,7 +5,7 @@ with io.open('readme.md', encoding='utf_8') as fp:
     readme = fp.read()
 
 setup(name='django_anti_crawler',
-      version='0.2',
+      version='0.4',
       description='A light weight anti crawler app for Django.',
       long_description=readme,
       long_description_content_type='text/markdown',
