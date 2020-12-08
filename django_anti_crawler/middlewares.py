@@ -12,6 +12,7 @@ class DjangoAntiCrawlerMiddleware(object):
 
     def __call__(self, request):
 
+        # get the client's IP address
         x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
         ip = x_forwarded_for.split(',')[0] if x_forwarded_for else request.META.get('REMOTE_ADDR')
 
