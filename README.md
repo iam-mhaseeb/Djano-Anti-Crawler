@@ -69,6 +69,8 @@ Quick start
     MAX_ALLOWED_HITS_PER_IP = 2000  # max allowed hits per IP_TIMEOUT time from an IP. Default 2000.
     IP_HITS_TIMEOUT = 60  # timeout in seconds for IP in cache. Default 60.
 
+5. (optional) Set variable ANTI_CRAWLER_WHITELIST_BOTS and IP_HITS_TIMEOUT in settings.py file to whitelist specific bots or Ips::
+
    To test on local system, set these values to very low, e.g. IP_HITS_TIMEOUT = 30 and MAX_ALLOWED_HITS_PER_IP = 2.
    Restart the server and send requests frequently. After two requests you will start receiving 403 error.
    If not defined in settings file, default values will be used.
