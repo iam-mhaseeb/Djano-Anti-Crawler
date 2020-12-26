@@ -43,8 +43,8 @@ class DjangoAntiCrawlerMiddleware(object):
               ip_hits_timeout
             ))
 
-        if this_ip_hits > max_allowed_hits:
-            return HttpResponseForbidden()
+            if this_ip_hits > max_allowed_hits:
+                return HttpResponseForbidden()
 
         response = self.get_response(request)
         return response
